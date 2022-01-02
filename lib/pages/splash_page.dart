@@ -7,7 +7,7 @@ class SplashPage extends StatelessWidget {
   navigateToHome(BuildContext context) {
     User? user = FirebaseAuth.instance.currentUser;
 
-    Future.delayed(Duration(seconds: 3), () {
+    Future.delayed(Duration(seconds: 5), () {
       if (user != null) {
         Navigator.pushReplacementNamed(context, "/home");
       } else {

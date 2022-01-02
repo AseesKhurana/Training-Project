@@ -12,21 +12,21 @@ class UserProfile extends StatefulWidget {
 }
 
 class _UserProfileState extends State<UserProfile> {
-  String imagePath = "NA";
-  final ImagePicker _picker = ImagePicker();
-
-  Future<void> uploadFile(String filePath) async {
-    File file = File(filePath);
-
-    try {
-      await FirebaseStorage.instance
-          .ref('profile-pics/' + Util.appUser!.uid.toString() + '.png')
-          .putFile(file);
-      print("UPLOAD SUCCESS");
-    } on FirebaseException catch (e) {
-      print("UPLOAD FAILED");
-    }
-  }
+  // String imagePath = "NA";
+  // final ImagePicker _picker = ImagePicker();
+  //
+  // Future<void> uploadFile(String filePath) async {
+  //   File file = File(filePath);
+  //
+  //   try {
+  //     await FirebaseStorage.instance
+  //         .ref('profile-pics/' + Util.appUser!.uid.toString() + '.png')
+  //         .putFile(file);
+  //     print("UPLOAD SUCCESS");
+  //   } on FirebaseException catch (e) {
+  //     print("UPLOAD FAILED");
+  //   }
+  // }
 
   // fetchImage() async {
   //   var data =
@@ -48,11 +48,11 @@ class _UserProfileState extends State<UserProfile> {
                 children: [
               Padding(padding: EdgeInsets.all(8.0)),
               InkWell(
-                onTap: () async {
-                  final XFile? image =
-                      await _picker.pickImage(source: ImageSource.gallery);
-                  uploadFile(image!.path);
-                },
+                // onTap: () async {
+                //   final XFile? image =
+                //       await _picker.pickImage(source: ImageSource.gallery);
+                //   uploadFile(image!.path);
+                // },
                 child: CircleAvatar(
                     radius: 90.0,
                     backgroundImage:

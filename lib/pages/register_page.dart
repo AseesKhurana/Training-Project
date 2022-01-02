@@ -186,7 +186,7 @@ class _RegisterUserPageState extends State<RegisterUserPage> {
                               decoration: InputDecoration(
                                 filled: true,
                                 alignLabelWithHint: true,
-                                labelText: "Login ID",
+                                labelText: "Email id",
                                 labelStyle: TextStyle(color: Colors.green),
                                 fillColor: Colors.transparent,
                                 enabledBorder: OutlineInputBorder(
@@ -312,33 +312,33 @@ class _RegisterUserPageState extends State<RegisterUserPage> {
                                     textAlign: TextAlign.center,
                                   ),
                                 )),
-                            Text("By Registering in You accept our Terms & Conditions", style: TextStyle(
-                                fontSize: 12.0, color: Colors.grey, fontWeight: FontWeight.w300),
-                              textAlign: TextAlign.center,),
-                            InkWell(
-                              onTap: (){
-                                // open the webview for privacy
-                              },
-                              child: Text(
-                                'Privacy Policy',
-                                style: TextStyle(
-                                    fontSize: 14.0, color: Colors.orange, fontWeight: FontWeight.w300, decoration: TextDecoration.underline),
-                                textAlign: TextAlign.center,
-                              ),
-                            ),
-                            SizedBox(height: 4),
-                            InkWell(
-                              onTap: (){
-                                // open the webview for terms and conditions
-                              },
-                              child: Text(
-                                'Terms & Conditions',
-                                style: TextStyle(
-                                  fontSize: 14.0, color: Colors.orange, fontWeight: FontWeight.w300, decoration: TextDecoration.underline,
-                                ),
-                                textAlign: TextAlign.center,
-                              ),
-                            )
+                            // Text("By Registering in You accept our Terms & Conditions", style: TextStyle(
+                            //     fontSize: 12.0, color: Colors.grey, fontWeight: FontWeight.w300),
+                            //   textAlign: TextAlign.center,),
+                            // InkWell(
+                            //   onTap: (){
+                            //     // open the webview for privacy
+                            //   },
+                            //   child: Text(
+                            //     'Privacy Policy',
+                            //     style: TextStyle(
+                            //         fontSize: 14.0, color: Colors.orange, fontWeight: FontWeight.w300, decoration: TextDecoration.underline),
+                            //     textAlign: TextAlign.center,
+                            //   ),
+                            // ),
+                            // SizedBox(height: 4),
+                            // InkWell(
+                            //   onTap: (){
+                            //     // open the webview for terms and conditions
+                            //   },
+                            //   child: Text(
+                            //     'Terms & Conditions',
+                            //     style: TextStyle(
+                            //       fontSize: 14.0, color: Colors.orange, fontWeight: FontWeight.w300, decoration: TextDecoration.underline,
+                            //     ),
+                            //     textAlign: TextAlign.center,
+                            //   ),
+                            // )
                           ],
                         ),
                       )

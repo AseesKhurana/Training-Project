@@ -19,11 +19,7 @@ class _OngoingProjectsPageState extends State<OngoingProjectsPage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("Ongoing Projects"),
-          leading: IconButton(
-            icon: Icon(Icons.arrow_back),
-            onPressed: (){},
-          )
+          title: Text("Ongoing Projects")
         ),
         body: StreamBuilder(
           stream: fetchDesigns(),

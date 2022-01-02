@@ -5,7 +5,6 @@ import 'package:homaze/pages/profile_page.dart';
 import 'architects_page.dart';
 import 'designing_page.dart';
 
-
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
 
@@ -14,21 +13,11 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-
-
   int index = 0;
 
-  List appBarName = [
-    'Homaze',
-    'Designs',
-    'Options'
-  ];
+  List appBarName = ['Homaze', 'Designs', 'Options'];
 
-  List widgets = [
-    ArchitectsPage(),
-    DesigningPage(),
-    UserProfile()
-  ];
+  List widgets = [ArchitectsPage(), DesigningPage(), UserProfile()];
 
   @override
   Widget build(BuildContext context) {
@@ -37,49 +26,49 @@ class _HomePageState extends State<HomePage> {
         title: Text(appBarName[index]),
         actions: [
           IconButton(
-            onPressed: (){
+            onPressed: () {
               Navigator.pushNamed(context, "/favourites");
             },
             icon: Icon(Icons.favorite),
             tooltip: "Favourites",
           ),
-           IconButton(
-             onPressed: (){
-               showDialog(
-                 context: context,
-                 builder: (BuildContext context) {
-                   return AlertDialog(
-                     title: Text('Are you sure you want to Sign Out ?'),
-                     actions: <Widget>[
-                       TextButton(
-                         child: Text("YES"),
-                         onPressed: () {
-                           Util.appUser = null;
-                           FirebaseAuth.instance.signOut();
-                           Navigator.pushNamed(context, "/login");
-                         },
-                       ),
-                       TextButton(
-                         child: Text("NO"),
-                         onPressed: () {
-                           Navigator.of(context).pop();
-                         },
-                       ),
-                     ],
-                   );
-                 },
-               );
-             },
-             icon: Icon(Icons.logout),
-             tooltip: "Log Out",
-           )
+          IconButton(
+            onPressed: () {
+              showDialog(
+                context: context,
+                builder: (BuildContext context) {
+                  return AlertDialog(
+                    title: Text('Are you sure you want to Sign Out ?'),
+                    actions: <Widget>[
+                      TextButton(
+                        child: Text("YES"),
+                        onPressed: () {
+                          Util.appUser = null;
+                          FirebaseAuth.instance.signOut();
+                          Navigator.pushNamed(context, "/login");
+                        },
+                      ),
+                      TextButton(
+                        child: Text("NO"),
+                        onPressed: () {
+                          Navigator.of(context).pop();
+                        },
+                      ),
+                    ],
+                  );
+                },
+              );
+            },
+            icon: Icon(Icons.logout),
+            tooltip: "Log Out",
+          )
         ],
       ),
       body: widgets[index],
       bottomNavigationBar: BottomNavigationBar(
         items: [
           BottomNavigationBarItem(
-              icon:  Icon(Icons.home),
+              icon: Icon(Icons.home),
               label: "Architects"
           ),
           BottomNavigationBarItem(
@@ -94,11 +83,10 @@ class _HomePageState extends State<HomePage> {
         currentIndex: index,
         selectedFontSize: 16,
         selectedItemColor: Colors.amber,
-        onTap:(idx){
-          setState((){
+        onTap: (idx) {
+          setState(() {
             index = idx;
-          }
-          );
+          });
         },
       ),
     );
